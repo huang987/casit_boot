@@ -19,6 +19,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- 去除Spring Boot的web-starter自带的tomcat-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -70,16 +78,7 @@
             </plugin>
         </plugins>
 
-        <resources>
-                <resource>
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.properties</include>
-                        <include>**/*.xml</include>
-                    </includes>
-                    <filtering>false</filtering>
-                </resource>
-    </resources>
+
     </build>
 
 </project>
